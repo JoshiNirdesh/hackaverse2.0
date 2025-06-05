@@ -10,6 +10,7 @@ import Investors from './samyak/nav/pages/Investors'
 import About from './samyak/nav/pages/About'
 import Loginbutton from './samyak/nav/pages/Loginbutton'
 import Registerbutton from './samyak/nav/pages/Registerbutton'
+import InvestorRegistration from './samyak/nav/pages/Investorregistration';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Loginbutton />} />
             <Route path="/register" element={<Registerbutton />} />
+            <Route path="/register/investor" element={<InvestorRegistration />} />
+            {/* <Route path="/register/startup" element={<Start />} /> */}
         </Routes>
     </BrowserRouter>
     { <Landing /> }
