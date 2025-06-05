@@ -1,5 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
+import { useState } from "react";
+import "./App.css";
+import Landing from "./Nirdesh/Landing";
 import Navbar from './samyak/nav/components/Navbar/navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Startups from './samyak/nav/pages/Startups'
@@ -8,10 +10,9 @@ import Investors from './samyak/nav/pages/Investors'
 import About from './samyak/nav/pages/About'
 import Loginbutton from './samyak/nav/pages/Loginbutton'
 import Registerbutton from './samyak/nav/pages/Registerbutton'
-// import Landing from './nirdesh/Landing'
 
 function App() {
-  return (<>
+  return (
     <div className="App">
     <BrowserRouter>
       <Navbar />
@@ -25,21 +26,9 @@ function App() {
             <Route path="/register" element={<Registerbutton />} />
         </Routes>
     </BrowserRouter>
+    { <Landing /> }
     </div>
-      {/* <Landing /> */}
-
-=======
-import { useState } from "react";
-import "./App.css";
-import Landing from "./Nirdesh/Landing";
-
-function App() {
-  return (
-    <>
-      <Landing />
->>>>>>> 43464e2875b7af1124fd9087eab73e84993e0a20
-    </>
-  );
+    );
 }
 
 export default App;
