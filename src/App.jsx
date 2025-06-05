@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navbar from './samyak/nav/components/Navbar/navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -27,8 +28,18 @@ function App() {
     </div>
       {/* <Landing /> */}
 
+=======
+import { useState } from "react";
+import "./App.css";
+import Landing from "./Nirdesh/Landing";
+
+function App() {
+  return (
+    <>
+      <Landing />
+>>>>>>> 43464e2875b7af1124fd9087eab73e84993e0a20
     </>
-  )
+  );
 }
 
-export default App
+export default App;
