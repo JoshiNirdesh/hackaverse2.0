@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../pages/css/Investorregistration.css'; 
+import '../pages/css/Investorregistration.css';
+
 
 const InvestorRegistration = () => {
   const [formData, setFormData] = useState({
@@ -96,7 +97,10 @@ const InvestorRegistration = () => {
     <div className="registration-form">
       <h2>Investor Registration</h2>
       <form onSubmit={handleSubmit} noValidate>
-        <label>Full Name:</label>
+        
+        <div className="form-group">
+           <div className="form-labels">
+          <label>Full Name:</label>
         <input
           type="text"
           name="fullName"
@@ -105,8 +109,10 @@ const InvestorRegistration = () => {
           onChange={handleChange}
         />
         {errors.fullName && <p className="error">{errors.fullName}</p>}
+        </div>
 
-        <label>Email:</label>
+        <div className="form-labels">
+          <label>Email:</label>
         <input
           type="email"
           name="email"
@@ -115,8 +121,11 @@ const InvestorRegistration = () => {
           onChange={handleChange}
         />
         {errors.email && <p className="error">{errors.email}</p>}
+        </div>
+        
 
-        <label>Password:</label>
+        <div className="form-labels">
+          <label>Password:</label>
         <input
           type="password"
           name="password"
@@ -125,78 +134,107 @@ const InvestorRegistration = () => {
           onChange={handleChange}
         />
         {errors.password && <p className="error">{errors.password}</p>}
+        </div>
+        </div>
+        
 
-        <label>NID:</label>
-        <input
-          type="text"
-          name="nid"
-          placeholder="National ID Number"
-          value={formData.nid}
-          onChange={handleChange}
-        />
-        {errors.nid && <p className="error">{errors.nid}</p>}
 
-        <label>Phone:</label>
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone number"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        {errors.phone && <p className="error">{errors.phone}</p>}
+        
+          <div className="form-group">
+            <div className="form-labels">
+              <label>NID:</label>
+              <input
+                type="text"
+                name="nid"
+                placeholder="National ID Number"
+                value={formData.nid}
+                onChange={handleChange}
+              />
+            {errors.nid && <p className="error">{errors.nid}</p>}
+          </div>
+        
+          <div className="form-labels">
+              <label>Phone:</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            {errors.phone && <p className="error">{errors.phone}</p>}
+          </div>
+        
 
-        <label>Address:</label>
-        <input
-          type="text"
-          name="address"
-          placeholder="Your address"
-          value={formData.address}
-          onChange={handleChange}
-        />
-        {errors.address && <p className="error">{errors.address}</p>}
+          <div className="form-labels">
+              <label>Address:</label>
+              <input
+                type="text"
+                name="address"
+                placeholder="Your address"
+                value={formData.address}
+                onChange={handleChange}
+              />
+            {errors.address && <p className="error">{errors.address}</p>}
+          </div>
+        </div>
+        
+        <div className="form-group">
+          <div className="form-labels">
+            <label>Gender:</label>
+            <select name="gender" value={formData.gender} onChange={handleChange}>
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            {errors.gender && <p className="error">{errors.gender}</p>}
+          </div>
+        
 
-        <label>Gender:</label>
-        <select name="gender" value={formData.gender} onChange={handleChange}>
-          <option value="">Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-        {errors.gender && <p className="error">{errors.gender}</p>}
+          <div className="form-labels">
+            <label>Budget:</label>
+            <input
+              type="number"
+              name="budget"
+              placeholder="Budget"
+              value={formData.budget}
+              onChange={handleChange}
+          />
+          {errors.budget && <p className="error">{errors.budget}</p>}
+        </div> 
+               
+          <div className="form-labels">
+            <label>Expertise:</label>
+            <input
+              type="text"
+              name="expertise"
+              placeholder="Areas of expertise"
+              value={formData.expertise}
+              onChange={handleChange}
+            />
+          {errors.expertise && <p className="error">{errors.expertise}</p>}
+          </div>
+        </div>
 
-        <label>Budget:</label>
-        <input
-          type="number"
-          name="budget"
-          placeholder="Budget"
-          value={formData.budget}
-          onChange={handleChange}
-        />
-        {errors.budget && <p className="error">{errors.budget}</p>}
+        <div className="form-group">
+          <div className="form-labels">
+            <label>Professional Background:</label>
+            <textarea
+              name="professionalBackground"
+              placeholder="Your professional background"
+              value={formData.professionalBackground}
+              onChange={handleChange}
+            />
+            {errors.professionalBackground && (
+            <p className="error">{errors.professionalBackground}</p>
+          )}
+          </div>
+        </div>
+        
 
-        <label>Professional Background:</label>
-        <textarea
-          name="professionalBackground"
-          placeholder="Your professional background"
-          value={formData.professionalBackground}
-          onChange={handleChange}
-        />
-        {errors.professionalBackground && (
-          <p className="error">{errors.professionalBackground}</p>
-        )}
-
-        <label>Expertise:</label>
-        <input
-          type="text"
-          name="expertise"
-          placeholder="Areas of expertise"
-          value={formData.expertise}
-          onChange={handleChange}
-        />
-        {errors.expertise && <p className="error">{errors.expertise}</p>}
-
-        <button type="submit">Register as Investor</button>
+        <button className="next-btn" type="submit">NEXT</button>
+          <p className="login-link">Already Registered? <a href="#">Click Me</a></p>
       </form>
     </div>
   );

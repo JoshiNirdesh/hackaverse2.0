@@ -14,6 +14,7 @@ const Navbar = () => {
       </div>
 
       <ul className='nav-menu'>
+        <li><Link to='/'>Home</Link></li>
         <li><Link to='/startups'>Startups</Link></li>
         <li><Link to='/investor'>Investors</Link></li>
         <li><Link to='/deals'>Deals</Link></li>

@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
         <Routes>
-            {/* <Route path="/" element={<Landing />} /> */}
+            <Route path="/" element={<Landing />} />
             <Route path="/startups" element={<Startups />} />
             <Route path="/deals" element={<Deals />} />
             <Route path="/investor" element={<Investors />} />
@@ -29,7 +29,6 @@ function App() {
             {/* <Route path="/register/startup" element={<Start />} /> */}
         </Routes>
     </BrowserRouter>
-    { <Landing /> }
     </div>
     );
 }
