@@ -1,10 +1,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
+}
+
+.background {
+  display: flex;
   background-image: url('../../../../assets/sl_122221_47450_06.jpg');
   background-size: cover;
 }
-
 
 .registration-form {
   background: white;

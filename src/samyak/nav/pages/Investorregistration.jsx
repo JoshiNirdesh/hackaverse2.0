@@ -94,6 +94,8 @@ const InvestorRegistration = () => {
   };
 
   return (
+    <div className='background'>
+    
     <div className="registration-form">
       <h2>Investor Registration</h2>
       <form onSubmit={handleSubmit} noValidate>
@@ -236,6 +238,7 @@ const InvestorRegistration = () => {
         <button className="next-btn" type="submit">NEXT</button>
           <p className="login-link">Already Registered? <a href="#">Click Me</a></p>
       </form>
+    </div>
     </div>
   );
 };
