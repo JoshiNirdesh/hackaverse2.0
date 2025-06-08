@@ -9,8 +9,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='nav-logo'>
+        <span onClick={() => navigate('/landing')} className='logo-container'>
         <img src={logo} alt="logo" className='logo' />
         <p>Company Name</p>
+        </span>
       </div>
 
       <ul className='nav-menu'>

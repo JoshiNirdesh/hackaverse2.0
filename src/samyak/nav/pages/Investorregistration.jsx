@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../pages/css/Investorregistration.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const InvestorRegistration = () => {
@@ -19,49 +20,49 @@ const InvestorRegistration = () => {
 
   const [errors, setErrors] = useState({});
 
-  const validate = () => {
-    const errs = {};
+  // const validate = () => {
+  //   const errs = {};
 
-    if (!formData.fullName.trim()) errs.fullName = 'Full Name is required';
+  //   if (!formData.fullName.trim()) errs.fullName = 'Full Name is required';
 
-    if (!formData.email) {
-      errs.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errs.email = 'Email is invalid';
-    }
+  //   if (!formData.email) {
+  //     errs.email = 'Email is required';
+  //   } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+  //     errs.email = 'Email is invalid';
+  //   }
 
-    if (!formData.password) {
-      errs.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      errs.password = 'Password must be at least 6 characters';
-    }
+  //   if (!formData.password) {
+  //     errs.password = 'Password is required';
+  //   } else if (formData.password.length < 6) {
+  //     errs.password = 'Password must be at least 6 characters';
+  //   }
 
-    if (!formData.nid.trim()) errs.nid = 'NID is required';
+  //   if (!formData.nid.trim()) errs.nid = 'NID is required';
 
-    if (!formData.phone.trim()) {
-      errs.phone = 'Phone number is required';
-    } else if (!/^\d{10,15}$/.test(formData.phone)) {
-      errs.phone = 'Phone number must be 10 to 15 digits';
-    }
+  //   if (!formData.phone.trim()) {
+  //     errs.phone = 'Phone number is required';
+  //   } else if (!/^\d{10,15}$/.test(formData.phone)) {
+  //     errs.phone = 'Phone number must be 10 to 15 digits';
+  //   }
 
-    if (!formData.address.trim()) errs.address = 'Address is required';
+  //   if (!formData.address.trim()) errs.address = 'Address is required';
 
-    if (!formData.gender) errs.gender = 'Gender is required';
+  //   if (!formData.gender) errs.gender = 'Gender is required';
 
-    if (!formData.budget) {
-      errs.budget = 'Budget is required';
-    } else if (isNaN(formData.budget) || Number(formData.budget) <= 0) {
-      errs.budget = 'Budget must be a positive number';
-    }
+  //   if (!formData.budget) {
+  //     errs.budget = 'Budget is required';
+  //   } else if (isNaN(formData.budget) || Number(formData.budget) <= 0) {
+  //     errs.budget = 'Budget must be a positive number';
+  //   }
 
-    if (!formData.professionalBackground.trim())
-      errs.professionalBackground = 'Professional background is required';
+  //   if (!formData.professionalBackground.trim())
+  //     errs.professionalBackground = 'Professional background is required';
 
-    if (!formData.expertise.trim()) errs.expertise = 'Expertise is required';
+  //   if (!formData.expertise.trim()) errs.expertise = 'Expertise is required';
 
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
+  //   setErrors(errs);
+  //   return Object.keys(errs).length === 0;
+  // };
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -235,7 +236,7 @@ const InvestorRegistration = () => {
         </div>
         
 
-        <button className="next-btn" type="submit">NEXT</button>
+        <button className="next-btn" onClick={() => navigate('/register/investor/sector')}>NEXT</button>
           <p className="login-link">Already Registered? <a href="#">Click Me</a></p>
       </form>
     </div>
