@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className='nav-logo'>
         <span onClick={() => navigate('/landing')} className='logo-container'>
         <img src={logo} alt="logo" className='logo' />
-        <p>Company Name</p>
+        {/* <p>Sajilo Lagani</p> */}
         </span>
       </div>
 
