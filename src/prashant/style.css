@@ -1,117 +1,190 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-}
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+  }
 
-.DiscoverStartups {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
+  .DiscoverStartups {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-.title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
 
-.subtitle {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
 
-.featured-section {
-  margin-top: 2rem;
-}
+  .featured-section {
+    margin-top: 2rem;
+  }
 
-.card-container {
+  .headingg{
+    margin-top: 20px;
+  }
+
+.filters {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
-  flex-wrap: wrap;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  height: 84px; 
+  align-items: center;
+  background-color: white;
+  padding: 0 0.5rem; 
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.card {
-  flex: 1 1 calc(33.333% - 1.5rem); 
-  max-width: calc(33.333% - 1.5rem);
+.search-input,
+.category-select {
+  height: 38px;  
+  padding: 0 0.5rem; 
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
-  background: white;
-  padding: 1rem;
-  border: 1px solid #fefe7f;
-  border-radius: 8px;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.05);
-  position: relative;
+  margin: 0; 
+}
+
+.search-input {
+  flex: 1 1 65%;
+  min-width: 190px;
+  margin: 0 1rem;
+}
+
+.category-select {
+  flex: 1 1 28%;
+  max-width: 190px;
+  margin-right: 1rem; 
+}
+
+
+  .card-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 1.5rem); 
+    max-width: calc(33.333% - 1.5rem);
+    box-sizing: border-box;
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #fefe7f;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .card-icon {
   font-size: 2rem;
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .card-name {
-  flex: 1;
+  flex-grow: 1;
 }
 
-.card-star {
-  color: gold;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 0;
-  top: 0;
+.card-name h3 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-.badges, .tags {
-  margin: 0.5rem 0;
+.card-neck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.badge, .tag {
-  display: inline-block;
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.badge {
   background: #eee;
   border-radius: 12px;
   padding: 0.2rem 0.6rem;
   font-size: 0.75rem;
-  margin: 0 0.25rem 0.25rem 0;
 }
 
-.description {
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
+.card-star {
+  font-size: 1.5rem;
+  color: gold;
+  flex-shrink: 0;
+  margin-top: -13px;
 }
 
-.details-btn {
-  margin-top: 1rem;
-  padding: 0.5rem;
-  width: 100%;
-  border: none;
-  background: black;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.details-btn:hover {
-  background: #333;
-}
-
-@media (max-width: 1024px) {
-  .card {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+  .badge, .tag {
+    display: inline-block;
+    background: #eee;
+    border-radius: 12px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    margin: 0 0.25rem 0.25rem 0;
   }
-}
 
-@media (max-width: 640px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .tag {
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
-}
+
+  .description {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .details-btn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .details-btn:hover {
+    background: #333;
+  }
+
+  @media (max-width: 1024px) {
+    .card {
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
 
