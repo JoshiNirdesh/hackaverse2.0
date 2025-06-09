@@ -165,7 +165,7 @@ const StartupRegistration = () => {
             <button type="submit" className="next-btn">Register Startup</button>
           </div>
 
-          <p className="login-link">Already Registered? <a href="#">Login here</a></p>
+          <p className="login-link">Already Registered? <a href="/signin">Login here</a></p>
         </form>
       </div>
     </div>

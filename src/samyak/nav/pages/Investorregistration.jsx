@@ -168,7 +168,7 @@ const InvestorRegistration = () => {
             <button type="submit" className="next-btn">Register Now</button>
           </div>
 
-          <p className="login-link">Already Registered? <a href="#">Click Me</a></p>
+          <p className="login-link">Already Registered? <a href="/signin">Click Me</a></p>
         </form>
       </div>
     </div>
