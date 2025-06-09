@@ -8,10 +8,9 @@ import Startups from './samyak/nav/pages/Startups'
 import Deals from './samyak/nav/pages/Deals'
 import Investors from './samyak/nav/pages/Investors'
 import About from './samyak/nav/pages/About'
-import Loginbutton from './samyak/nav/pages/Loginbutton'
+import Signinbutton from './samyak/nav/pages/Loginbutton'
 import Registerbutton from './samyak/nav/pages/Registerbutton'
 import InvestorRegistration from './samyak/nav/pages/Investorregistration';
-import Sector from './samyak/nav/pages/Sector';
 import Startupregistration from './samyak/nav/pages/Startupregistration';
 
 function App() {
@@ -25,10 +24,9 @@ function App() {
             <Route path="/deals" element={<Deals />} />
             <Route path="/investor" element={<Investors />} />
             <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Loginbutton />} />
+            <Route path="/signin" element={<Signinbutton />} />
             <Route path="/register" element={<Registerbutton />} />
             <Route path="/register/investor" element={<InvestorRegistration />} />
-            <Route path="/register/investor/sector" element={<Sector />} />
             <Route path="/register/startup" element={<Startupregistration />} />
             {/* <Route path="/register/startup" element={<Start />} /> */}
         </Routes>

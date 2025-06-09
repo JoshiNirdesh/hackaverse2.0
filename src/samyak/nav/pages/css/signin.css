@@ -9,22 +9,24 @@ body {
   background-size: cover;
 }
 
-.registration-form {
+.signin-registration-form {
   background: white;
   padding: 30px;
   max-width: 1000px;
+  min-width: 500px;
   margin: 30px auto;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.registration-form h2 {
+.signin-registration-form h2 {
   margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .form-group {
@@ -39,39 +41,18 @@ input{
   width: 296px !important;
 }
 
-select{
-  width: 316px !important;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-textarea {
-  width: 290px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="file"],
-input[type="url"] {
+input[type="url"],
+input[type="checkbox"]{
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 
-}
-
-.gender-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
 }
 
 .next-btn {
@@ -90,13 +71,19 @@ input[type="url"] {
   margin-top: 10px;
 }
 
-.registration-form h2 {
+.signin-registration-form h2 {
   text-align: center;
   color: #333;
   margin-bottom: 30px;
 }
 
-.registration-form h2 {
+.signin-registration-form p {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.signin-registration-form p {
   color: #444;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
@@ -107,7 +94,7 @@ input[type="url"] {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.signin-form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
@@ -126,24 +113,12 @@ input[type="url"] {
 .form-group input[type="password"],
 .form-group input[type="number"],
 .form-group input[type="url"],
+.form-group input[type="checkbox"],
 .form-group select {
   width: 100%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
-}
-
-.gender-options {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
-}
-
-.gender-options label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: normal;
 }
 
 .error {
@@ -359,5 +334,48 @@ Background container
 @media (max-width: 768px) {
   .button-group {
     gap: 20px; /* Reduce the gap on smaller screens */
+  }
+}
+
+.signin-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+
+.remember-me {
+  display: block; /* Change from inline-flex */
+  white-space: nowrap;
+  margin-left: -140px;
+}
+
+.remember-me input[type="checkbox"] {
+  float: left;
+  margin: 0;
+  margin-right: -135px;
+  position: relative;
+  top: 2px; /* Adjust vertical alignment if needed */
+}
+.forgot-password {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive adjustment */
+@media (max-width: 500px) {
+  .signin-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
