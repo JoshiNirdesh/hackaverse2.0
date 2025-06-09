@@ -1,15 +1,14 @@
+import FeaturedStartups from "./featuredStartups"
+import "./style.css"
 
-import featuredStartups from './prashant/featuredStartups'
-import './styles.css'
-
-function DiscoverStatus() {
+function DiscoverStartups() {
   return (
-    <div className="DiscoveStartups">
+    <div className="DiscoverStartups">
       <h1 className="title">Discover Startups</h1>
       <p className="subtitle">Explore high-potential startups seeking investment</p>
-      <featuredStartups />
+      <FeaturedStartups />
     </div>
   )
 }
 
-export default DiscoverStatus
+export default DiscoverStartups

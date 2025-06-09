@@ -35,10 +35,10 @@ const startups = [
   }
 ]
 
-function featuredStartups() {
+function FeaturedStartups() {
   return (
     <div className="featured-section">
-      <h2>⭐ Featured Startups</h2>
+      <h2> Featured Startups</h2>
       <div className="card-container">
         {startups.map((startup, index) => (
           <div key={index} className="card">
@@ -66,4 +66,4 @@ function featuredStartups() {
   )
 }
 
-export default featuredStartups
+export default FeaturedStartups

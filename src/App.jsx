@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from "react";
 import "./App.css";
 import Landing from "./Nirdesh/Landing";
-import Navbar from './samyak/nav/components/Navbar/navbar'
+import Navbar from './samyak/nav/components/navbar/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Startups from './samyak/nav/pages/Startups'
+import Startups from './prashant/DiscoverStartups' 
 import Deals from './samyak/nav/pages/Deals'
 import Investors from './samyak/nav/pages/Investors'
 import About from './samyak/nav/pages/About'
