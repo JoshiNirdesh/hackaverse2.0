@@ -37,11 +37,7 @@ const Login = () => {
       if (res.ok) {
         alert('Login successful!');
         if (formData.remember) {
-          // Store email or token in localStorage if desired
-          // localStorage.setItem('email', formData.email);
         }
-        // Redirect or do something
-        // navigate('/dashboard');
       } else {
         setError(data.message || 'Invalid credentials');
       }
